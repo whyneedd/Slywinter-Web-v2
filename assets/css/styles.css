@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: #333;
+    transition: opacity .8s;
+    opacity: 1;
+
+}
+
+.loading {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #121212;
+    z-index: 999;
+    color: #fff;
+
+}
+
+.objts {
+    position: relative;
+    display: flex;
+    width: 20%;
+    height: 14px;
+    margin: 8px;
+    border-radius: 50px;
+    border: 2px solid rgb(6, 84, 251);
+
+}
+
+.objts .line-box {
+    width: 100%;
+    border-radius: 50px;
+    background-color: rgb(251, 251, 8);
+    animation: loading 8s linear;
+}
+
+
+.pages {
+    display: none;
+
+}
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 60%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+
+.header {
+    min-width: 100%;
+    min-height: 100vh;
+    position: relative;
+
+}
+
+.navbar {
+    width: 100%;
+    padding: 10px 100px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: fixed;
+
+    z-index: 999;
+    background-color: #121212;
+
+}
+
+.navbar .logo {
+    display: flex;
+    font-size: 2em;
+    color: #fff;
+    font-weight: 900;
+
+}
+
+.navbar .nav-list {
+    list-style: none;
+    display: flex;
+
+}
+
+.navbar .nav-list li {
+    list-style: none;
+    display: flex;
+    margin: 8px;
+
+
+}
+
+.navbar .nav-list li a {
+    color: #fff;
+    padding: 5px;
+    font-weight: 700;
+    transition: .3s;
+
+}
+
+.navbar .nav-list li a:hover {
+    letter-spacing: 2px;
+    color: rgb(251, 251, 8);
+
+}
+
+.navbar .navbar-list-left {
+    flex: 1;
+    margin-left: 24px;
+
+}
+
+.content {
+    width: 100%;
+    min-height: 100vh;
+
+    position: relative;
+}
+
+.container-content {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    flex-flow: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.img small,
+h4 {
+    font-size: 30px;
+    color: #fff;
+
+}
+
+.img h1 {
+    font-size: 45px;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.img img {
+    width: 220px;
+    height: 220px;
+    border-radius: 14rem;
+    margin-bottom: 22px;
+
+}
+
+.content-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.content-btn .btn {
+    margin: 12px;
+    height: 34px;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 18px 50px;
+    border-radius: 5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+
+}
+
+.content-btn .btn:hover {
+    transform: scale(1.2);
+    background-color: rgb(251, 251, 8);
+
+}
+
+@media screen and (max-width: 1150px) {
+    .navbar .nav-list {
+        display: none;
+
+    }
+
+    .humbger {
+        position: absolute;
+        display: block;
+        width: 35px;
+        height: 35px;
+        right: 10%;
+        align-items: center;
+
+        appearance: none;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .humbger .bar, .humbger::before, .humbger::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 5px;
+        margin: 6px;
+        border-radius: 50px;
+        background-color: #fff;
+    }
+
+    .humbger::before {
+        transform: rotate(-45deg) translate(-8px, 6px);
+
+    }
+
+    .humbger::after {
+        transform: rotate(45deg) translate(-9px, -8px);
+    }
+
+    .humbger .bar {
+        opacity: 0;
+    }
+}
