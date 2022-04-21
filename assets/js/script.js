@@ -10,7 +10,7 @@ window.addEventListener("load", ShowAff)
 var loading;
 
 function ShowAff () {
-    loading = setTimeout(ShowPages, 1);
+    loading = setTimeout(ShowPages, 10000);
 }
 
 function ShowPages() {
