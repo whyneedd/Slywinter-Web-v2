@@ -216,6 +216,20 @@ h4 {
 
 }
 
+.cursor {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    transition: .1s;
+    border-radius: 5px;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+
+}
+
 .humbgermenu {
     display: none;
 }
